@@ -1,4 +1,4 @@
-use inc::Module::Install 0.67;
+use inc::Module::Install 0.75;
 
 use 5.008001;
 
@@ -17,6 +17,8 @@ build_requires 'B::Hooks::OP::Check' => '0.18';
 configure_requires 'ExtUtils::Depends' => 0.302; #minimum version that works on Win32+gcc
 configure_requires 'B::Hooks::OP::Check' => '0.18';
 #minimum version that depends on ExtUtils::Depends 0.302
+
+repository 'http://github.com/rafl/devel-declare/tree';
 
 postamble(<<'EOM');
 $(OBJECT) : stolen_chunk_of_toke.c
